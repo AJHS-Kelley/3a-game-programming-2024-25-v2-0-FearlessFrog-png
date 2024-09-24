@@ -29,7 +29,7 @@ score = int(input("Please display your score")) # This is where the user types i
 
 if score <= 10000:
     lives -= 1 # Lose a life
-elif score < 1000001: 
+elif score < 100001: 
     lives += 1 # Gain a lifes
 elif score > 100000:
     lives += 2  # Gain 2 lifes
