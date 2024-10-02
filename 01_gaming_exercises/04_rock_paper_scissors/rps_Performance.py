@@ -121,4 +121,10 @@ elif playerChoice == "paper" and cpuChoice == "scissors":
 
 
 print(f"Your Final Score: {playerScore}\nCPU Final Score: {cpuScore}\n")
-if playerScore > cpuScore
+if playerScore > cpuScore:
+  print(f"Congratulations {playername}, a winner is you!".\n")
+  elif cpuScore > playerScore:
+  print(f"The CPU wins. You are a dissapoitment to all.\n")
+  else:
+    print("Unable to determine a winner.\nPlease restart.\n")
+    exit()
