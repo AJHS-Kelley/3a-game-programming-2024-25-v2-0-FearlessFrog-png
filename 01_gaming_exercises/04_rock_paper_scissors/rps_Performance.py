@@ -40,11 +40,11 @@ THE CPU will select ROCK, PAPER AND SCISSORS at random.
 """)
 
 # MULTI-LINE STRINGS CAN BE USED AS BIG COMMENTS.
-''''''
+""")
 Anything in between the sets of double quotesis just ignored.
 If you need to write large comments, it's easier to use multi-line strings then
 putting a # in front of 15 differnet lines.
-""""""
+""")
 
 # MAIN GAME LOOP
 while playerScore < 5 and cpuScore < 5:
@@ -55,9 +55,9 @@ while playerScore < 5 and cpuScore < 5:
     if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
         print("You are not following directions. Please try again.\n")
         exit()
-        print(f"You have choosen{playerchoice}.\n")
-    else:
-      print(f"You have choosen {playerName}.\n")
+  print(f"You have choosen{playerChoice}.\n")
+else:
+  print(f"You have choosen {playerName}.\n")
 
 # let cpu select choice at random
 cpuChoice = random.randiant(0,2) # randonly slect 0, 1, or 2
@@ -73,7 +73,7 @@ else:
 # print(f"CPU choice: {cpuChoice}")
 
 # compare player choice to cpu choice
-if playerChoice == "rock" and cpuChoice == "paper"
+if playerChoice == "rock" and cpuChoice == "paper":
   # CPU WINS
   print(f"The CPU choose {cpuChoice} adn you choose {playerChoice}.\n")
   print(f"The CPU wins a point")
@@ -100,31 +100,31 @@ elif playerChoice == "scissors" and cpuChoice == "paper":
 elif playerChoice == "scissors" and cpuChoice == "scissors":
   # DRAW
   print(f"The CPU choose {cpuChoice} and you choose {playerChoice}.\n")
-  print("It's a draw!".\n")
-elif playerChoice == "paper" and cpuChoice == "rock"
+  print("It's a draw.\n")
+elif playerChoice == "paper" and cpuChoice == "rock":
   # PLAYER WINS        
   print(f"The CPU choose {cpuChoice} and you choose {playerChoice}.\n")
-  print("You win a point".\n")
-        playerScore += 1
-elif playerChoice == "paper" and cpuChoice == "paper"
+  print("You win a point.\n")
+  playerScore += 1
+elif playerChoice == "paper" and cpuChoice == "paper":
   # DRAW
   print(f"The CPU choose {cpuChoice} and the player choose {playerChoice}.\n")
-  print("It's a draw".\n")
+  print("It's a draw.\n")
 elif playerChoice == "paper" and cpuChoice == "scissors":
   # CPU WINS
   print(f"The CPU choose {cpuChoice} and you choose {playerChoice}.\n")
   print("The CPU wins a point.\n")
-      cpuChoice += 1
-  else:
+  cpuChoice += 1
+else:
   print("Unable to determine a winner. Please restart")
-      exit()
+  exit()
 
 
 print(f"Your Final Score: {playerScore}\nCPU Final Score: {cpuScore}\n")
 if playerScore > cpuScore:
-  print(f"Congratulations {playername}, a winner is you!".\n")
-  elif cpuScore > playerScore:
+  print(f"Congratulations {playerName}, a winner is you!.\n")
+elif cpuScore > playerScore:
   print(f"The CPU wins. You are a dissapoitment to all.\n")
-  else:
+else:
     print("Unable to determine a winner.\nPlease restart.\n")
     exit()
