@@ -23,7 +23,7 @@ isCorrect = input("Is that correct? Type yes or no and press enter.\n").lower()
 if isCorrect == "yes":
   print(f"Ok {playerName}, let's play Rock, Paper, and Scissors.\n")
 else:
-  playerName = input("Please type your name and press enter,\n")
+  playerName = input("Please type your name and press enter.\n")
 
 # THE RULES using MULTI-LINE STRINGS
 print(f"""
@@ -44,7 +44,7 @@ THE CPU will select ROCK, PAPER AND SCISSORS at random.
 Anything in between the sets of double quotesis just ignored.
 If you need to write large comments, it's easier to use multi-line strings then
 putting a # in front of 15 differnet lines.
-""")
+"""
 
 # MAIN GAME LOOP
 while playerScore < 5 and cpuScore < 5:
