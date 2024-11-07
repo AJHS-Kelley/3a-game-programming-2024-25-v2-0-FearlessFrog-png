@@ -4,6 +4,12 @@
 import random
 import time
 
+# Global varibales for Items
+hasAxe = False
+hasSheild = False
+hasGraple = False
+hasTorch = False
+
 def displayIntro():
 
     print('You are in a land full of dragons. In front of you,')
@@ -11,6 +17,12 @@ def displayIntro():
     print('and will share his treasure with you. The other dragon')
     print('is greedy and hungry, and will eat you on sight.')
     print()
+
+hasironSwword = False
+damage = random.randint(1,20)
+pickUpItem = input("Your walking along the trail when you see an iron sword on the ground, Do you wish to pick up the sword?, Type yes or no then press enter.\n")
+if pickUpItem == "yes":
+    hasironSword = True
 
 def chooseCave():
     cave = ''
@@ -46,3 +58,16 @@ while playAgain == 'yes' or playAgain == 'y':
     checkCave(caveNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
+
+
+# Using Booleans for Items
+hasSword = False
+damage = random.randint(1,20)
+pickUpItem = input("You see a iron sword on the ground, Do you pick it up? Type yes or no, then press enter")
+if pickUpItem == "yes":
+    hasSword = True
+
+if hasSword:
+    damage += 20
+else:
+    damage += 5        
