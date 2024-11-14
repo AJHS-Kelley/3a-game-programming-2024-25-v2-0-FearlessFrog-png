@@ -9,14 +9,14 @@ def displayIntro():
     print('You awake to find yourself in a fantasy world. While you explore your surroundings,')
     print('you see two villages. In the first village, everything seems to be attacked or destroyed')
     print('and everyone is in dismay. In the second village,')
-    print('everyone is happy, partying, and drinking. Which one will you choose?')
+    print('everyone is happy, partying, drinking and seem to be unaware to the destruction. Which one will you choose?')
     print()
 
 def chooseVillage():
     village = ''
     while village != '1' and village != '2':
-        print('Which village will you enter? (1 or 2)')
-        vilage = input()
+        print('Which village will you enter? (1 or 2)') # PROVIDE A DESCRIPTION OF CHOICES #1 and #2.  
+        village = input()
     return village
 
 def checkVillage(chosenVillage):
@@ -32,9 +32,8 @@ def checkVillage(chosenVillage):
 
     if chosenVillage == str(destroyedVillage):
         print('You respond to him saying "W-what was the name of the dragon?')
-
     else:
-        print('Gobbles you down in one bite!')
+        print('The man reponds looks at you with a look of fear as he says the dragons name, Rhaegal')
 
 
 
@@ -42,7 +41,7 @@ playAgain = 'yes'
 
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
-    caveNumber = chooseVillage()
+    villageNumber = chooseVillage()
     checkVillage(villageNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
