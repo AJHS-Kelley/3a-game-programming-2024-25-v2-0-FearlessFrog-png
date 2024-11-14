@@ -4,46 +4,34 @@
 import random
 import time
 
-# Global varibales for Items
-hasAxe = False
-hasSheild = False
-hasGraple = False
-hasTorch = False
-
 def displayIntro():
 
-    print('You are in a land full of dragons. In front of you,')
-    print('you see two caves. In one cave, the dragon is friendly')
-    print('and will share his treasure with you. The other dragon')
-    print('is greedy and hungry, and will eat you on sight.')
+    print('You awake to find yourself in a fantasy world. While you explore your surroundings,')
+    print('you see two villages. In the first village, everything seems to be attacked or destroyed')
+    print('and everyone is in dismay. In the second village,')
+    print('everyone is happy, partying, and drinking. Which one will you choose?')
     print()
 
-hasironSwword = False
-damage = random.randint(1,20)
-pickUpItem = input("Your walking along the trail when you see an iron sword on the ground, Do you wish to pick up the sword?, Type yes or no then press enter.\n")
-if pickUpItem == "yes":
-    hasironSword = True
+def chooseVillage():
+    village = ''
+    while village != '1' and village != '2':
+        print('Which village will you enter? (1 or 2)')
+        vilage = input()
+    return village
 
-def chooseCave():
-    cave = ''
-    while cave != '1' and cave != '2':
-        print('Which cave will you go into? (1 or 2)')
-        cave = input()
-    return cave
-
-def checkCave(chosenCave):
-    print('You approach the cave...')
+def checkVillage(chosenVillage):
+    print('You approach the first village...')
     time.sleep(2)
-    print('It is dark and spooky...')
+    print('The residents seem to be distraught...')
     time.sleep(2)
-    print('A large dragon jumps out in front of you! He opens his jaws and...')
+    print('A man comes up to you with the look of fear in his eyes, he grabs you and says "The village has been atacked by a dragon!"...')
     print()
     time.sleep(2)
 
-    friendlyCave = random.randint(1, 2)
+    destroyedVillage = random.randint(1, 2)
 
-    if chosenCave == str(friendlyCave):
-        print('Gives you his treasure!')
+    if chosenVillage == str(destroyedVillage):
+        print('You respond to him saying "W-what was the name of the dragon?')
 
     else:
         print('Gobbles you down in one bite!')
@@ -54,20 +42,9 @@ playAgain = 'yes'
 
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
-    caveNumber = chooseCave()
-    checkCave(caveNumber)
+    caveNumber = chooseVillage()
+    checkVillage(villageNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
 
 
-# Using Booleans for Items
-hasSword = False
-damage = random.randint(1,20)
-pickUpItem = input("You see a iron sword on the ground, Do you pick it up? Type yes or no, then press enter")
-if pickUpItem == "yes":
-    hasSword = True
-
-if hasSword:
-    damage += 20
-else:
-    damage += 5        
