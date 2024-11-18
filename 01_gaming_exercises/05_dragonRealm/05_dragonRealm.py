@@ -3,6 +3,22 @@
 
 import random
 import time
+import datetime
+
+# SAVING DATA TO A FILE
+# STEP 1 -- Create the file name to use.
+logFileName = "dragonRealmLog.txt"
+# logFileName = "dragonRealmLog.txt"
+# Examples: dragonRealmLog1132Am.txt
+
+# STEP 2 -- Crate / Open the file to save the data.
+saveData = open(logFileName, "a")
+#FILE MODES
+# "x" CREATES FILE, IF FILE EXISTS, EXIT WITH ERROR MESSAGE.
+# "w" CREATES FILE, IF FILE EXISTS, ERASE AND OVERRIDE FILE CONTENTS.
+# "a" CREATES FILE, IF FILE EXISTS, APPEND DATA TO THE FILE.
+
+saveData.write("GAME STARTED" + " " +str(datetime.datetime.now()) + "\n")
 
 def displayIntro():
 
@@ -37,6 +53,7 @@ def checkVillage(chosenVillage):
 
 
 
+
 playAgain = 'yes'
 
 while playAgain == 'yes' or playAgain == 'y':
@@ -45,5 +62,39 @@ while playAgain == 'yes' or playAgain == 'y':
     checkVillage(villageNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
+
+# ITEM SELECTION
+print("You begin to prepare for you quest, you realize you need items that will be crucial in defeating the dragon\n")
+print("You check your inventory, you have: a clean glass bottle , an iron sword, a shield, bandages, and a torch\n")
+time.sleep(4)
+numItems = 0
+while numItems < 2 or 1:
+    selectedItem = int(input("Pick your item wisley, which 2 items wil you take?"))
+    if selectedItem == 1:
+        hasbottle = True
+    elif selectedItem == 2:
+        hasIronSword = True
+    elif selectedItem == 3:
+        hasShield = True
+    elif selectedItem == 4:
+        hasBandages = True
+    elif selectedItem == 5:
+        hastorch = True        
+
+    
+
+
+
+
+
+# CLOSE THE FILE
+saveData.close("END OF GAME LOG\n\n")
+saveData.close()
+
+
+
+
+
+
 
 
