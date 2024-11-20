@@ -49,7 +49,8 @@ def checkVillage(chosenVillage):
     if chosenVillage == str(destroyedVillage):
         print('You respond to him saying "W-what was the name of the dragon?')
     else:
-        print('The man reponds looks at you with a look of fear as he says the dragons name, Rhaegal')
+        print('The man reponds looks at you with a look of fear as he says the dragons name, Rhaegal, Press y or n to accept the offer')
+        
 
 
 
