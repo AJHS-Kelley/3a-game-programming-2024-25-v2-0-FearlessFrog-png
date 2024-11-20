@@ -31,7 +31,7 @@ def displayIntro():
 def chooseVillage():
     village = ''
     while village != '1' and village != '2':
-        print('Which village will you enter? (1 or 2)') # PROVIDE A DESCRIPTION OF CHOICES #1 and #2.  
+        print('Which village will you enter? (1 or 2)')
         village = input()
     return village
 
@@ -45,44 +45,44 @@ def checkVillage(chosenVillage):
     time.sleep(2)
 
     destroyedVillage = random.randint(1, 2)
-    # FIX THE SECOND VILLAGE CODE.  
+    partyingVillage = random.randint(1,2)
     if chosenVillage == str(destroyedVillage):
         print('You respond to him saying "W-what was the name of the dragon?')
     else:
         print('The man reponds looks at you with a look of fear as he says the dragons name, Rhaegal, Press y or n to accept the offer')
-        
 
 
+   
 
 
 playAgain = 'yes'
+ 
+ 
 
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
     # ITEM SELECTION
-    print("You begin to prepare for you quest, you realize you need items that will be crucial in defeating the dragon\n")
-    print("You check your inventory, you have: a clean glass bottle , an iron sword, a shield, bandages, and a torch\n")
-    # You need to tell the playe what NUMBER represents each ITEM. 
-    time.sleep(4)
-    numItems = 0
-    while numItems < 2:
-        selectedItem = int(input("Pick your item wisley, which 2 items wil you take?"))
-        if selectedItem == 1:
-            hasbottle = True
-        elif selectedItem == 2:
-            hasIronSword = True
-        elif selectedItem == 3:
-            hasShield = True
-        elif selectedItem == 4:
-            hasBandages = True
-        elif selectedItem == 5:
-            hastorch = True   
+print("You begin to prepare for you quest, you realize you need items that will be crucial in defeating the dragon\n")
+print("You check your inventory, you have: a clean glass bottle , an iron sword, a shield, bandages, and a torch\n")
+time.sleep(4)
+numItems = 0
+while numItems < 2:
+    selectedItem = int(input("Pick your item wisley, press 1 for the bottle, 2 for the iron sword, press 3 for the shield, press 4 for the bandages, and press 5 for the torch"))
+    if selectedItem == 1:
+        hasbottle = True
+    elif selectedItem == 2:
+        hasIronSword = True
+    elif selectedItem == 3:
+        hasShield = True
+    elif selectedItem == 4:
+        hasBandages = True
+    elif selectedItem == 5:
+        hastorch = True         
     villageNumber = chooseVillage()
     checkVillage(villageNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
 
-     
 
     
 
@@ -93,10 +93,6 @@ while playAgain == 'yes' or playAgain == 'y':
 # CLOSE THE FILE
 saveData.close("END OF GAME LOG\n\n")
 saveData.close()
-
-
-
-
 
 
 
