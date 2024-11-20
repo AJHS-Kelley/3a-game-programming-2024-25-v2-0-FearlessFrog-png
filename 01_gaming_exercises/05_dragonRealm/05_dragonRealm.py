@@ -45,7 +45,7 @@ def checkVillage(chosenVillage):
     time.sleep(2)
 
     destroyedVillage = random.randint(1, 2)
-
+    # FIX THE SECOND VILLAGE CODE.  
     if chosenVillage == str(destroyedVillage):
         print('You respond to him saying "W-what was the name of the dragon?')
     else:
@@ -58,28 +58,30 @@ playAgain = 'yes'
 
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
+    # ITEM SELECTION
+    print("You begin to prepare for you quest, you realize you need items that will be crucial in defeating the dragon\n")
+    print("You check your inventory, you have: a clean glass bottle , an iron sword, a shield, bandages, and a torch\n")
+    # You need to tell the playe what NUMBER represents each ITEM. 
+    time.sleep(4)
+    numItems = 0
+    while numItems < 2:
+        selectedItem = int(input("Pick your item wisley, which 2 items wil you take?"))
+        if selectedItem == 1:
+            hasbottle = True
+        elif selectedItem == 2:
+            hasIronSword = True
+        elif selectedItem == 3:
+            hasShield = True
+        elif selectedItem == 4:
+            hasBandages = True
+        elif selectedItem == 5:
+            hastorch = True   
     villageNumber = chooseVillage()
     checkVillage(villageNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
 
-# ITEM SELECTION
-print("You begin to prepare for you quest, you realize you need items that will be crucial in defeating the dragon\n")
-print("You check your inventory, you have: a clean glass bottle , an iron sword, a shield, bandages, and a torch\n")
-time.sleep(4)
-numItems = 0
-while numItems < 2 or 1:
-    selectedItem = int(input("Pick your item wisley, which 2 items wil you take?"))
-    if selectedItem == 1:
-        hasbottle = True
-    elif selectedItem == 2:
-        hasIronSword = True
-    elif selectedItem == 3:
-        hasShield = True
-    elif selectedItem == 4:
-        hasBandages = True
-    elif selectedItem == 5:
-        hastorch = True        
+     
 
     
 
