@@ -20,6 +20,9 @@ saveData = open(logFileName, "a")
 
 saveData.write("GAME STARTED" + " " +str(datetime.datetime.now()) + "\n")
 
+
+numItems = 0
+
 def displayIntro():
 
     print('You awake to find yourself in a fantasy world. While you explore your surroundings,')
@@ -50,36 +53,33 @@ def checkVillage(chosenVillage):
         print('You respond to him saying "W-what was the name of the dragon?')
     else:
         print('The man reponds looks at you with a look of fear as he says the dragons name, Rhaegal, Press y or n to accept the offer')
-
-
-   
-
-
-playAgain = 'yes'
- 
+        if chosenVillage ==("2"):
+            print("You enter the second village, and join the village people, as they eat.")
+playAgain ='yes'
  
 
 while playAgain == 'yes' or playAgain == 'y':
-    displayIntro()
     # ITEM SELECTION
-print("You begin to prepare for you quest, you realize you need items that will be crucial in defeating the dragon\n")
-print("You check your inventory, you have: a clean glass bottle , an iron sword, a shield, bandages, and a torch\n")
-time.sleep(4)
-numItems = 0
-while numItems < 2:
-    selectedItem = int(input("Pick your item wisley, press 1 for the bottle, 2 for the iron sword, press 3 for the shield, press 4 for the bandages, and press 5 for the torch"))
-    if selectedItem == 1:
-        hasbottle = True
-    elif selectedItem == 2:
-        hasIronSword = True
-    elif selectedItem == 3:
-        hasShield = True
-    elif selectedItem == 4:
-        hasBandages = True
-    elif selectedItem == 5:
-        hastorch = True         
+
+    displayIntro()
+    print("You begin to prepare for you quest, you realize you need items that will be crucial in defeating the dragon\n")
+    print("You check your inventory, you have: a clean glass bottle , an iron sword, a shield, bandages, and a torch\n")
     villageNumber = chooseVillage()
     checkVillage(villageNumber)
+    numItems = 0
+    while numItems < 2:
+        selectedItem = input("Pick your item wisley, press 1 for the bottle, 2 for the iron sword, press 3 for the shield, press 4 for the bandages, and press 5 for the torch")
+        if selectedItem == '1':
+            hasbottle = True
+        elif selectedItem == '2':
+            hasIronSword = True
+        elif selectedItem == '3':
+            hasShield = True
+        elif selectedItem == '4':
+            hasBandages = True
+        elif selectedItem == '5':
+            hasTorch = True
+        numItems += 1    
     print('Do you want to play again? (yes or no)')
     playAgain = input()
 
