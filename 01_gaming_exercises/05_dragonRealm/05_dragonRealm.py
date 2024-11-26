@@ -26,7 +26,7 @@ numItems = 0
 def displayIntro():
 
     print('You awake to find yourself in a fantasy world. While you explore your surroundings,')
-    print('you see two villages. In the first village, everything seems to be attacked or destroyed')
+    print('You see two villages. In the first village, everything seems to be attacked or destroyed')
     print('and everyone is in dismay. In the second village,')
     print('everyone is happy, partying, drinking and seem to be unaware to the destruction. Which one will you choose?')
     print()
@@ -44,17 +44,22 @@ def checkVillage(chosenVillage):
     print('The residents seem to be distraught...')
     time.sleep(2)
     print('A man comes up to you with the look of fear in his eyes, he grabs you and says "The village has been atacked by a dragon!"...')
+    time.sleep(2)
     print()
     time.sleep(2)
 
     destroyedVillage = random.randint(1, 2)
     partyingVillage = random.randint(1,2)
-    if chosenVillage == str(destroyedVillage):
-        print('You respond to him saying "W-what was the name of the dragon?')
-    else:
-        print('The man reponds looks at you with a look of fear as he says the dragons name, Rhaegal, Press y or n to accept the offer')
-        if chosenVillage ==("2"):
-            print("You enter the second village, and join the village people, as they eat.")
+def checkVillage (destroyedVillage):
+    print("You approach the second village...")
+    time.sleep(2)
+    print("The villagers welcome you with open arms, and they point you towards their celebration")
+    time.sleep(2)
+    print("Your distratced, when you realize a dragon has shown up uninvited")
+    time.sleep(2)
+    print("The dragon uses his fire to scorch the entire village, including the residents and you")
+    print()
+    time.sleep(2)
 playAgain ='yes'
  
 
