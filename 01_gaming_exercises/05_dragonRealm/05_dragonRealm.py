@@ -1,5 +1,6 @@
 # Dragon Realm, <Tegan_Robinson>, v0.0
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
+# Really proud of your effort, Tegan!  You ran into a number of problems and did your best to solve them. 
 
 import random
 import time
