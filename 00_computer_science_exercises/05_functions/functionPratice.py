@@ -53,6 +53,5 @@ def canRideRollerCoaster(age: int, height: int) -> bool:
         return True
     else:
         print('You cannot ride.\n')
-        return False
-    
+        return False  
 canRideRollerCoaster(4, 10) # Arguments must be passed in the same order as thee function signature indicates.
